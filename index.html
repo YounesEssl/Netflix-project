@@ -57,32 +57,55 @@
         </section>
 
         <section class="w-screen h-screen">
-            <img class="w-full h-screen object-cover" src="./assets/images/fond.jpeg">
-                
+
             <div class="absolute bg-gradient-to-t from-transparent to-black top-0 w-full h-10 z-10"></div>
             <div class="absolute bg-gradient-to-b from-transparent to-black bottom-0 w-full h-10"></div>
-            <div class="absolute top-40">
-                <div class="flex flex-col h-full justify-center ml-16 xl:w-2/6 lg:w-2/5 sm:w-2/4 w-3/5">
+            <div id="fond">
+                <img  id="imagefma" class="w-full h-screen object-cover" src="./assets/images/fond.jpeg">
+                <video id="bandeannonce" src="assets/videos/bandeannonce.mp4" class="object-cover w-full h-screen hidden"></video>
+                <div  class="absolute top-40">
+                    <div class="flex flex-col h-full justify-center ml-16 xl:w-2/6 lg:w-2/5 sm:w-2/4 w-3/5">
+                        
+                        <img src="assets/images/titre-fma.png" alt="Full Metal Alchemist" class="z-10">
 
-                    <img src="assets/images/titre-fma.png" alt="Full Metal Alchemist" class="z-10">
+                            <div class="z-10 flex items-center mt-3">
 
-                        <div class="z-10 flex items-center mt-3">
-
-                        </div>
-                
-                        <p class="z-10 text-xl mt-3">
-                            En tentant de redonner vie à leur mère par alchimie, deux frères produisent une réaction chimique aux effets dévastateurs sur leurs corps.
-                        </p>
-                
-    
-                         <div class="z-10 mt-6 w-full">
-
-                            <button class="font-bold px-9 py-2 bg-white hover:bg-white/[.70] rounded-md text-black mr-5"><span class="mr-1"><i class="fa-solid fa-play"></i></span> Lecture</button>
-                            <button class="font-bold px-7 py-2 bg-gray-600/[.5] hover:bg-gray-500/[.4] rounded-md"><span class="mr-1"><i class="fa-solid fa-circle-info"></i></span> Plus d'info</button>
+                            </div>
+                    
+                            <p class="z-10 text-xl mt-3">
+                                En tentant de redonner vie à leur mère par alchimie, deux frères produisent une réaction chimique aux effets dévastateurs sur leurs corps.
+                            </p>
+                    
         
-                        </div>
+                            <div class="z-10 mt-6 w-full">
+
+                                <button class="font-bold px-9 py-2 bg-white hover:bg-white/[.70] rounded-md text-black mr-5"><span class="mr-1"><i class="fa-solid fa-play"></i></span> Lecture</button>
+                                <button class="font-bold px-7 py-2 bg-gray-600/[.5] hover:bg-gray-500/[.4] rounded-md"><span class="mr-1"><i class="fa-solid fa-circle-info"></i></span> Plus d'info</button>
+            
+                            </div>
+                    </div>
                 </div>
             </div>
+
+            <script>
+                
+                let video = document.getElementById(`bandeannonce`);
+                let fond = document.getElementById(`fond`)
+                let imagefma = document.getElementById(`imagefma`)
+                
+                fond.addEventListener(`mouseover`, () => {
+                    imagefma.style.display ="none"
+                    video.style.display = "block"
+                    video.play();
+                });
+
+                fond.addEventListener(`mouseout`, () => {
+                    imagefma.style.display ="block"
+                    video.style.display = "none"
+                    video.pause();
+                });
+
+            </script>
     
     
         </section> 
