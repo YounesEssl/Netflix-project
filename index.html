@@ -10,18 +10,24 @@
     <link rel="icon" href="./favicon.png">
 
     <title>Home - Netflix</title>
+    <style>
 
+        main section::-webkit-scrollbar {
+            display: none;
+        }
+
+    </style>
 </head>
  <body class="bg-black text-slate-100"> 
     <header class=" bg-cover bg-gradient-to-r from-black-500 to-black-900 bg-center bg-no-repeat h-screen w-screen" >
         
-        <section class="lg:py-2 py-1 px-10 fixed top-0 w-full z-40">
+        <section id="navbar" class="lg: py-1 px-10 fixed top-0 w-full z-40 bg-black">
 
             <nav class="flex md:justify-between justify-center">
 
                 <div class="flex items-center md:justify-start w-auto">
 
-                    <img src="assets/images/Netflix-logo.png" alt="Netflix Logo" class="w-28 hover:cursor-pointer">
+                    <img src="assets/images/Netflix-logo.png" alt="Netflix Logo" class="w-24 hover:cursor-pointer">
 
                     <div class="md:flex hidden justify-between lg:ml-8 md:ml-3 lg:text-sm text-xs">
 
@@ -53,16 +59,35 @@
                 </div>
 
             </nav>
-
+            <script>
+                
+                    const elm = document.getElementById("navbar")
+                
+                    window.onscroll = () => {
+                
+                        let scrollTop = window.scrollY
+                
+                        if(scrollTop > 250) {
+                
+                            elm.classList.add("bg-black")
+                
+                        } else {
+                
+                            elm.classList.remove("bg-black")
+                
+                        }
+                
+                    }
+            </script>
         </section>
 
-        <section class="w-screen h-screen">
+        
 
-            <div class="absolute bg-gradient-to-t from-transparent to-black top-0 w-full h-10 z-10"></div>
-            <div class="absolute bg-gradient-to-b from-transparent to-black bottom-0 w-full h-10"></div>
-            <div id="fond">
-                <img  id="imagefma" class="w-full h-screen object-cover" src="./assets/images/fond.jpeg">
-                <video id="bandeannonce" src="assets/videos/bandeannonce.mp4" class="object-cover w-full h-screen hidden"></video>
+        <section class="w-screen h-screen overflow-x-hidden">
+
+            <div id="fond" class="overflow-x-hidden">
+                <img  id="imagefma" class="w-screen h-screen object-cover" src="./assets/images/fond.jpeg">
+                <video id="bandeannonce" src="assets/videos/bandeannonce.mp4" class="w-screen h-screen hidden"></video>
                 <div  class="absolute top-40">
                     <div class="flex flex-col h-full justify-center ml-16 xl:w-2/6 lg:w-2/5 sm:w-2/4 w-3/5">
                         
@@ -87,6 +112,8 @@
                 </div>
             </div>
 
+            <div class="absolute bg-gradient-to-t from-transparent to-black top-0 w-screen h-10 z-10"></div>
+            <div class="absolute bg-gradient-to-b from-transparent to-black bottom-0 w-screen h-10"></div>
             <script>
                 
                 let video = document.getElementById(`bandeannonce`);
@@ -110,9 +137,13 @@
     
         </section> 
     </header>
-    <main class="text-white">
-        <section class="overflow-x-hidden overflow-x-scroll scroll-smooth mt-20">
+
+    <main class="text-white overflow-x-hidden w-full">
+
+        <section class="overflow-x-hidden overflow-x-scroll scroll-smooth mt-20 ">
+
             <p class="absolute ml-10 my-5 font-bold text-xl">My List</p>
+            
             <div class="flex mt-16 space-x-2 ml-10" style="width: 182rem;">
                 <div class="w-52 h-auto"><a><img class="rounded"src ="./assets/images/Maliste/2.png" /></a></div>
                 <div class="w-52 h-auto"><a><img class="rounded"src ="./assets/images/Maliste/1.png" /></a></div>
