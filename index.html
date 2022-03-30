@@ -18,7 +18,7 @@
 
     </style>
 </head>
- <body class="bg-black text-slate-100"> 
+ <body class="overflow-x-hidden bg-black text-slate-100"> 
     <header class=" bg-cover bg-gradient-to-r from-black-500 to-black-900 bg-center bg-no-repeat h-screen w-screen" >
         
         <section id="navbar" class="lg: py-1 px-10 fixed top-0 w-full z-40 bg-black">
@@ -86,8 +86,8 @@
         <section class="w-screen h-screen overflow-x-hidden">
 
             <div id="fond" class="overflow-x-hidden">
-                <img  id="imagefma" class="w-screen h-screen object-cover" src="./assets/images/fond.jpeg">
-                <video id="bandeannonce" src="assets/videos/bandeannonce.mp4" class="w-screen h-screen hidden"></video>
+                <img  id="imagefma" class="w-screen h-full object-cover" src="./assets/images/fond.jpeg">
+                <video id="bandeannonce" src="assets/videos/bandeannonce.mp4" class="w-screen h-full hidden"></video>
                 <div  class="absolute top-40">
                     <div class="flex flex-col h-full justify-center ml-16 xl:w-2/6 lg:w-2/5 sm:w-2/4 w-3/5">
                         
@@ -138,13 +138,15 @@
         </section> 
     </header>
 
-    <main class="text-white overflow-x-hidden w-full">
+    <main class="text-white w-full">
 
-        <section class="overflow-x-hidden overflow-x-scroll scroll-smooth mt-20 ">
+
+        <!-- MY LIST -->
+        <section class="overflow-x-scroll -smooth mt-20 ">
 
             <p class="absolute ml-10 my-5 font-bold text-xl">My List</p>
             
-            <div class="flex mt-16 space-x-2 ml-10" style="width: 182rem;">
+            <div class="flex mt-16 space-x-2 ml-10">
                 <div class="w-52 h-auto"><a><img class="rounded"src ="./assets/images/Maliste/2.png" /></a></div>
                 <div class="w-52 h-auto"><a><img class="rounded"src ="./assets/images/Maliste/1.png" /></a></div>
                 <div class="w-52 h-auto"><a><img class="rounded"src ="./assets/images/Maliste/3.png" /></a></div>
@@ -157,7 +159,8 @@
                 <div class="w-52 h-auto"><a><img class="rounded"src ="./assets/images/Maliste/10.png" /></a></div>
             </div>
         </section>
-        <section class="overflow-x-hidden overflow-x-scroll scroll-smooth mt-20">
+        
+        <section class="scroll-smooth mt-20">
             <p class="absolute ml-10 font-bold text-xl">TV Shows</p>
             <div class="flex m16 space-x-2 ml-10 mt-10" style="width: 182rem;">
                 <div class="w-52 h-auto"><a><img src ="./assets/images/Maliste/1.png" /></a></div>
@@ -172,9 +175,9 @@
                 <div class="w-52 h-auto"><a><img src ="./assets/images/Maliste/10.png" /></a></div>
             </div>
         </section>
-        <section class="overflow-x-hidden overflow-x-scroll scroll-smooth mt-20">
-            <p class="absolute ml-10 my-5 font-bold text-xl">Trending Now</p>
-            <div class="flex mt-16 space-x-5 ml-10" style="width: 182rem;">
+        <section class="scroll-smooth mt-20">
+        <p class="absolute ml-10 my-5 font-bold text-xl">Trending Now</p>
+            <div class="flex mt-16 space-x-2 ml-10" style="width: 182rem;">
                 <div class="w-52 h-auto"><a><img src ="./assets/images/Maliste/2.png" /></a></div>
                 <div class="w-52 h-auto"><a><img src ="./assets/images/Maliste/3.png" /></a></div>
                 <div class="w-52 h-auto"><a><img src ="./assets/images/Maliste/1.png" /></a></div>
@@ -189,7 +192,7 @@
         </section>
         <section class="overflow-x-hidden overflow-x-scroll scroll-smooth mt-20">
             <p class="absolute ml-10 my-5 font-bold text-xl">Watch it Again</p>
-            <div class="flex mt-16 space-x-5 ml-10" style="width: 182rem;">
+            <div class="flex mt-16 space-x-2 ml-10" style="width: 182rem;">
                 <div class="w-52 h-auto"><a><img src ="./assets/images/Maliste/1.png" /></a></div>
                 <div class="w-52 h-auto"><a><img src ="./assets/images/Maliste/2.png" /></a></div>
                 <div class="w-52 h-auto"><a><img src ="./assets/images/Maliste/3.png" /></a></div>
@@ -363,7 +366,7 @@
 
         <p class="absolute ml-10 my-5 font-bold text-xl">Top 10 on planet Mars</p>
 
-        <section class="overflow-x-hidden overflow-x-scroll scroll-smooth mt-20">
+        <section class="mt-20">
 
             <div class="flex space-x-2">
 
